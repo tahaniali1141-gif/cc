@@ -19,9 +19,8 @@ const MODELS = {
 
 // يحدد المزوّد من شكل المفتاح
 function detectProvider(key) {
-  if (key.startsWith("sk-ant-")) return "anthropic";
-  if (key.startsWith("AIza")) return "gemini";
-  return "openai"; // الافتراضي لأي مفتاح آخر
+ 
+  if (key.startsWith("AQ.")) return "gemini";
 }
 
 export default async function handler(req, res) {
